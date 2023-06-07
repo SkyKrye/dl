@@ -1,0 +1,14 @@
+    html{
+    background: url(dl.smpverge.cf/pexels-pixabay-433155r.jpg);
+    background-size: cover;
+    color: white;
+    font-family: consolas;
+    text-shadow: 5px 3px black;
+    text-align: center;
+    padding: 20%;
+    }
+    ::selection {
+    background: white;
+    color: #111;
+    text-shadow: none;
+    }
