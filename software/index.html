@@ -1,17 +1,26 @@
 <html>
 <head>
-  <style>
-    body{
-    background: #111;
-    color: white;
-    font-family: consolas;
-    padding: 10px;
-    }
-  </style>
+  <title>skycore></title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="/DLRicon_transparent500x500.png" type="image/x-icon" />
 </head>
 <body>
   <h1>smpverge dl</h1>
-  <p>smpverge dl/download/server website</p>
-  
+  <p>smpverge download mirror website</p>
+  h1>Files List</h1>
+    <ul id="filesList"></ul>
+
+    <script>
+        fetch('/files')
+            .then(response => response.json())
+            .then(data => {
+                const filesListElement = document.getElementById('filesList');
+                data.forEach(file => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = file.name + ' - Date added: ' + file.dateAdded + ' - Size: ' + file.size;
+                    filesListElement.appendChild(listItem);
+                });
+            });
+    </script>
 </body>
 </html>
