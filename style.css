@@ -5,10 +5,24 @@
     font-family: consolas;
     text-shadow: 5px 3px black;
     text-align: center;
-    padding: 20%;
+    padding-top: 20px;
     }
     ::selection {
     background: white;
     color: #111;
     text-shadow: none;
+    }
+    table {
+    border-collapse: collapse;
+    }
+    tr {
+    border-bottom: 1px solid white;
+    border-collapse: separate;
+    border-spacing: 10px;
+    transition: 100ms;
+    }
+    tr:hover {
+    background-color: #111
+    text-shadow: none;
+    transition: 100ms;
     }
